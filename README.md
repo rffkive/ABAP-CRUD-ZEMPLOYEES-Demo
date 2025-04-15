@@ -2,30 +2,19 @@
 
 This project demonstrates basic ABAP CRUD operations using a custom table `ZEMPLOYEES`.
 
-## Features
+## 💼 Features
 
-- Insert and update employee records using `MODIFY`
+- Insert new records using `INSERT`
 - Delete records with `DELETE` (both key-based and from work area)
+- Error handling with `SY-SUBRC`
+- Update or add records using `MODIFY`
 - Display table data using `SELECT INTO TABLE` and `LOOP`
-- Use of `CLEAR`, `SY-SUBRC`, `SKIP`, and `@DATA`
 
-## ABAP Program Included
+## 📂 Files
 
-**Z_TESTEMPLOYEE**  
-Main report for performing the following:
-- INSERT from `wa_employee`
-- DELETE using key and `FROM work area`
-- UPDATE using `MODIFY` with `SELECT SINGLE` check
-- READ table using `SELECT * INTO TABLE it_employee`
+- `z_testemployee.abap` — ABAP report code
+- `zemployees_structure.txt` — Table structure
 
-## Sample Table Structure (ZEMPLOYEES)
+## 🚀 Run Instructions
 
-| Field       | Type     | Description        |
-|-------------|----------|--------------------|
-| EMPLOYEE    | CHAR(8)  | Employee ID        |
-| SURNAME     | CHAR(40) | Last Name          |
-| FIRSTNAME   | CHAR(40) | First Name         |
-| TITLE       | CHAR(10) | Title (Mr/Ms/etc.) |
-| DOB         | DATS     | Date of Birth      |
-
----
+Use transaction code `SE38` or `SE80`, paste the code, and run it. Ensure `ZEMPLOYEES` table is created in SE11.
