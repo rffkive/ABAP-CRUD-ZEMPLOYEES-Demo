@@ -54,18 +54,20 @@ ENDLOOP.
 
 /* INSERT example. 
 CLEAR wa_employee. /* always clear work area first before start include entry in it
+
 wa_employee-employee = '10000008'.
 wa_employee-surname = 'LEE'.
 wa_employee-firstname = 'AMY'.
 wa_employee-title = 'MS'.
 wa_employee-dob = '19950101'.
-INSERT zemployees FROM wa_employee.
+
+INSERT zemployees FROM wa_employee. 
 
 IF sy-subrc = 0.
 WRITE: "Data added successfully".
 ELSE. 
 WRITE: "ERROR", sy-subrc.
-ENDIF.
+ENDIF. /* expected output will be Data added succcessfully
 
 SKIP.
 
@@ -75,20 +77,22 @@ DELETE FROM zemployees WHERE employee = '10000004'.
    WRITE: 'Data deleted successfully'.
    ELSE.
      WRITE: 'error', sy-subrc.
-     ENDIF.
+     ENDIF. /* expected output will be Data deleted succcessfully
+
 
 SKIP.
 
 CLEAR wa_employee.
 
-wa_employee-employee = '1000008'.
+wa_employee-employee = '10000008'. /
 DELETE zemployees FROM wa_employee.
 
  if sy-subrc = 0.
    WRITE: 'Data deleted successfully'.
    ELSE.
      WRITE: 'error', sy-subrc.
-     ENDIF.
+     ENDIF. /* expected output will be Data deleted succcessfully
 
 SKIP.
+
 
