@@ -1,0 +1,9 @@
+ZEMPLOYEES Table Structure:
+
+Field        Type     Description
+------------ -------- ---------------------
+EMPLOYEE     CHAR(8)  Employee ID (Key)
+SURNAME      CHAR(40) Last Name
+FIRSTNAME    CHAR(40) First Name
+TITLE        CHAR(10) Title (Mr/Ms/etc.)
+DOB          DATS     Date of Birth
