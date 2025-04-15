@@ -72,7 +72,7 @@ ENDIF. /* expected output will be Data added succcessfully
 SKIP.
 
 /* DELETE Example
-DELETE FROM zemployees WHERE employee = '10000004'.
+DELETE FROM zemployees WHERE employee = '10000004'. /* direct deletion using a WHERE clause
  if sy-subrc = 0.
    WRITE: 'Data deleted successfully'.
    ELSE.
@@ -84,8 +84,8 @@ SKIP.
 
 CLEAR wa_employee.
 
-wa_employee-employee = '10000008'. /
-DELETE zemployees FROM wa_employee.
+wa_employee-employee = '10000008'. 
+DELETE zemployees FROM wa_employee. /* deletes a record that matches all the key fields in the work area
 
  if sy-subrc = 0.
    WRITE: 'Data deleted successfully'.
